@@ -8,7 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-TOKEN = "NzcxMDE5NDY2OTk3NzYwMDA0.X5mB1Q.12TmZEVd51JXsXSbCMRp5dS6j8Y"
+token = os.environ['DISCORD_BOT_TOKEN']
 
 bot = commands.Bot(command_prefix = ".a ")
 
