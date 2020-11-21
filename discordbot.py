@@ -49,30 +49,6 @@ async def _8ball(ctx, *, question):
                 "Yes – definitely.",
                 "You may rely on it."]
     await ctx.send(f'質問: {question};\n答え: {random.choice(responses)}')
-
-
-
-
-
-
-
-@bot.command()
-async def tannto(ctx, *, day):
-    
-    if day == "Mon":
-        await ctx.send('三年女子が担当です')
-    if day == "Tue":
-        await ctx.send("三年男子が担当です")
-    if day == "Wed":
-        await ctx.send("一年が担当です")
-    if day == "Thu":
-        await ctx.send("二年女子が担当です")
-    if day == "Fri":
-        await ctx.send("二年男子が担当です")
-    if day == "Sat":
-        await ctx.send("二年二名と三年二名が担当です")
-    if day == "Sun":
-        await ctx.send("今日は報道の仕事がありません")
 @bot.command()
 async def voca(ctx, word):
     result = requests.get("https://dictionary.goo.ne.jp/word/"+word+"/")
