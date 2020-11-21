@@ -10,8 +10,9 @@ import requests
 from bs4 import BeautifulSoup
 
 
-token = os.environ['DISCORD_BOT_TOKEN']
 bot = commands.Bot(command_prefix = ".a ")
+token = os.environ['DISCORD_BOT_TOKEN']
+
 
 
 
@@ -81,14 +82,6 @@ async def _8ball(ctx, *, question):
                 "You may rely on it."]
     await ctx.send(f'質問: {question};\n答え: {random.choice(responses)}')
 
-@bot.command()
-async def load(ctx, extension):
-    bot.load._extension(f'cogs.{extension}')
-@bot.command()
-async def unload(ctx, extension):
-    bot.unload._extension(f'cogs.{extension}')
-for filename in os.listdir('./cogs'):
-    if filename.endswith('.py'):
 
 
 
