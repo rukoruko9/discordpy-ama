@@ -51,7 +51,7 @@ async def _8ball(ctx, *, question):
     await ctx.send(f'質問: {question};\n答え: {random.choice(responses)}')
 @bot.command()
 async def voca(ctx, word):
-    result = requests.get("https://dictionary.goo.ne.jp/word/"+word+"/")
+    result = requests.get("https://dictionary.goo.ne.jp/word/" + word + "/")
     result = BeautifulSoup(result.text, "html.parser")
     for meta_tag in result.find_all('meta', attrs={'name': 'personal_snippet'}):
         await ctx.send(meta_tag.get('content'))
