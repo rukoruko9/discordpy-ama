@@ -1,14 +1,18 @@
-import os
+import os, sys
 import discord
+import time
 import random
 from discord.ext import commands
 import random
 import requests
 from bs4 import BeautifulSoup
-import traceback
+
+
+TOKEN = "NzcxMDE5NDY2OTk3NzYwMDA0.X5mB1Q.12TmZEVd51JXsXSbCMRp5dS6j8Y"
 
 bot = commands.Bot(command_prefix = ".a ")
-token = os.environ['DISCORD_BOT_TOKEN']
+
+
 
 
 @bot.command()
@@ -78,10 +82,4 @@ async def _8ball(ctx, *, question):
 
 
 
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-
-
-bot.run(token)
+bot.run(TOKEN)  
