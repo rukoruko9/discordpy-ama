@@ -17,16 +17,12 @@ async def clear(ctx, amount = 5):
     await ctx.channel.purge(limit = amount)
 @bot.command()
 async def info(ctx):
-    embed = discord.Embed(title="素晴らしいボット", description="天中の情報を提供してくれる、素晴らしいボット", color=0xeee657)
-
-    
-    embed.add_field(name="製作者", value="rukoruko")
-
-    
+    embed = discord.Embed(title="素晴らしいボット", description="天中の情報を提供してくれる、素晴らしいボット", color=0xeee657) 
+    embed.add_field(name="製作者", value="rukoruko") 
     embed.add_field(name="このボットの鯖加入数", value=f"{len(bot.guilds)}")
     await ctx.send(embed=embed)
 
-@bot.command(aliases=['8ball','eightball','8ボール'])
+@bot.command(aliases=['8ball', 'eightball', '8ボール'])
 async def _8ball(ctx, *, question):
     responses = ["As I see it, yes.",
                 "Ask again later.",
@@ -60,9 +56,5 @@ async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
-    
-
-
-
 
 bot.run(token)  
