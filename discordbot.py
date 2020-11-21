@@ -1,3 +1,4 @@
+import traceback
 import os, sys
 import discord
 import time
