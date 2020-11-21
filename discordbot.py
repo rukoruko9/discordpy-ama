@@ -9,7 +9,7 @@ import random
 import requests
 from bs4 import BeautifulSoup
 
-bot = commands.Bot(command_prefix='.a')
+
 token = os.environ['DISCORD_BOT_TOKEN']
 bot = commands.Bot(command_prefix = ".a ")
 
