@@ -81,16 +81,4 @@ async def _8ball(ctx, *, question):
                 "Yes – definitely.",
                 "You may rely on it."]
     await ctx.send(f'質問: {question};\n答え: {random.choice(responses)}')
-
-
-
-
-
-
-
-@bot.event
-async def on_command_error(ctx, error):
-    orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
 bot.run(token)
