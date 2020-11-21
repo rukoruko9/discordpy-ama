@@ -23,11 +23,12 @@ async def voca(ctx, word):
     result = BeautifulSoup(result.text, "html.parser")
     for meta_tag in result.find_all('meta', attrs={'name': 'personal_snippet'}):
         await ctx.send(meta_tag.get('content'))
-
+@bot.event
+async def on_command_error(ctx, error):
+    orig_error = getattr(error, "original", error)
+    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
+    await ctx.send(error_msg)
     
-
-
-
 
 
 
