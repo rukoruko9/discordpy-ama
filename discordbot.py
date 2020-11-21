@@ -1,5 +1,5 @@
 import traceback
-import os, sys
+import os
 import discord
 import time
 import random
