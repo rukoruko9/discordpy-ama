@@ -18,5 +18,7 @@ async def voca(ctx, word):
     for meta_tag in result.find_all('meta', attrs={'name': 'personal_snippet'}):
         await ctx.send(meta_tag.get('content'))
 
+git commit -m "By Yamada Taro" || echo "No changes to commit"
+
 
 bot.run(token)
