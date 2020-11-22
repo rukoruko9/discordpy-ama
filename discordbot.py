@@ -1,7 +1,6 @@
 import traceback
 import os
 import discord
-import time
 import random
 from discord.ext import commands
 import requests
