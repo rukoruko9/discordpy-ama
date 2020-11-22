@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 
 token = os.environ['DISCORD_BOT_TOKEN']
 
-bot=commands.Bot(command_prefix=".a ")
+bot = commands.Bot(command_prefix=".a ")
 @bot.command()
 async def clear(ctx, amount = 5):
     await ctx.channel.purge(limit = amount)
